@@ -5,13 +5,13 @@
 class Uta < Formula
   desc "CLI agent orchestrator — decompose goals, fan out to Claude Code / Gemini CLI, synthesize."
   homepage "https://unleashtheagents.ai"
-  version "0.8.0"
+  version "0.8.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/unleashtheagents/uta/releases/download/v0.8.0/uta_0.8.0_darwin_amd64.tar.gz"
-      sha256 "1e133178b98a006684c42aa1eaa9bae91c7201a9855ab39d04c73440b254fb21"
+      url "https://github.com/unleashtheagents/uta/releases/download/v0.8.1/uta_0.8.1_darwin_amd64.tar.gz"
+      sha256 "f234c9c4d41a9405a6ad815a72697509f2fd979bfb38af2f06d215235cd0167c"
 
       define_method(:install) do
         bin.install "uta"
@@ -19,8 +19,8 @@ class Uta < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/unleashtheagents/uta/releases/download/v0.8.0/uta_0.8.0_darwin_arm64.tar.gz"
-      sha256 "660c6a5a319b783545c7d3c96dfc83b15381495e75fed55835d6866a2fec1356"
+      url "https://github.com/unleashtheagents/uta/releases/download/v0.8.1/uta_0.8.1_darwin_arm64.tar.gz"
+      sha256 "dc448a73649103da8aab42fd2be6de30fb5d1af22a2ed130350cd268b78bdc87"
 
       define_method(:install) do
         bin.install "uta"
@@ -31,16 +31,16 @@ class Uta < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/unleashtheagents/uta/releases/download/v0.8.0/uta_0.8.0_linux_amd64.tar.gz"
-      sha256 "0f01d94e81a7e97863fa0683211a839d862f9fee44f0334987a7aa7e65a3659d"
+      url "https://github.com/unleashtheagents/uta/releases/download/v0.8.1/uta_0.8.1_linux_amd64.tar.gz"
+      sha256 "2970ca786cf9e83070e0f0940ec0beee44022e23373dba7e5ea991fc4ff4b54e"
       define_method(:install) do
         bin.install "uta"
         generate_completions_from_executable(bin/"uta", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/unleashtheagents/uta/releases/download/v0.8.0/uta_0.8.0_linux_arm64.tar.gz"
-      sha256 "ed5b8e08b6903782285a3307244eb6f5e867858d8e8cc13d8b88a16abfa1ba6b"
+      url "https://github.com/unleashtheagents/uta/releases/download/v0.8.1/uta_0.8.1_linux_arm64.tar.gz"
+      sha256 "05b814ecac0cb581cd34acfdc9020f83ce3776840e486c97ca773bfba3b67550"
       define_method(:install) do
         bin.install "uta"
         generate_completions_from_executable(bin/"uta", "completion")
